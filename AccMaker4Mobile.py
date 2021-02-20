@@ -11,11 +11,6 @@ except ImportError:
     os.system('pip install requests')
     import requests
 try:
-    from colored import fg
-except ImportError:
-    os.system('pip install colored')
-    from colored import fg
-try:
     from autopy import alert
 except ImportError:
     os.system('pip install autopy')
@@ -34,11 +29,8 @@ def close():
     exit()
 
 clear()
-white = fg("white")
-green = fg("green")
-red = fg("red")
 
-banner = white + """
+banner = """
    ____    ____        _  __     _                     __  
   / __ \  |___ \__   _(_)/ /_   | |__   ___ _ __ ___   \ \ 
  / / _` |   __) \ \ / / | '_ \  | '_ \ / _ \ '__/ _ \ (_) |
@@ -96,5 +88,5 @@ def reg():
         print(f"some error happened , check the response > \n{register.text}")
 
 
-print(white + banner + "                 - Account Maker .")
+print(banner + "                 - Account Maker .")
 reg()
