@@ -11,11 +11,6 @@ except ImportError:
     os.system('pip install requests')
     import requests
 try:
-    from autopy import alert
-except ImportError:
-    os.system('pip install autopy')
-    from autopy import alert
-try:
     import secrets
 except ImportError:
     os.system('pip install secrets')
